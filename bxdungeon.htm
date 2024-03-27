@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dungeon Room Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Random Dungeon Room Generator</h2>
+    <label for="numRooms">Enter the number of dungeon rooms:</label>
+    <input type="number" id="numRooms" min="1" max="100">
+    <button onclick="generateRooms()">Generate</button>
+    <br><br>
+    <table id="roomTable">
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Room Content</th>
+                <th>Treasure</th>
+            </tr>
+        </thead>
+        <tbody id="roomBody">
+            
+        </tbody>
+    </table>
+
+    <script>
+        function generateRooms() {
+            var numRooms = document.getElementById("numRooms").value;
+            var roomTable = document.getElementById("roomBody");
+            roomTable.innerHTML = "";
+
+            for (var i = 1; i <= numRooms; i++) {
+                var content, treasure;
+                var rollContent = Math.floor(Math.random() * 6) + 1; // Roll for content
+                var rollTreasure = Math.floor(Math.random() * 6) + 1; // Roll for treasure
+
+                // Determine room content
+                if (rollContent <= 2) {
+                    content = "Monster";
+                } else if (rollContent == 3) {
+                    content = "Trap";
+                } else if (rollContent == 4) {
+                    content = "Special";
+                } else {
+                    content = "Empty";
+                }
+
+                // Determine if room has treasure based on content
+                if ((content === "Monster" && rollTreasure <= 3) ||
+                    (content === "Trap" && rollTreasure <= 2) ||
+                    (content === "Empty" && rollTreasure === 1)) {
+                    treasure = "Yes";
+                } else {
+                    treasure = "No";
+                }
+
+                // Append row to table
+                var row = "<tr><td>" + i + "</td><td>" + content + "</td><td>" + treasure + "</td></tr>";
+                roomTable.innerHTML += row;
+            }
+        }
+    </script>
+</body>
+</html>
