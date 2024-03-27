@@ -7,4 +7,4 @@ and decides if the room has any monsters, traps, specials, or treasures in it. S
 2. Click on "Generate"
 
 ## How to install
-Download the bxdungeon.htm and run it on your favourite browser. Or, just try it on https://primarchofistanbul.github.io/bxdungeon/
+Download the bxdungeon.htm and run it on your favourite browser. Or, just try it on https://primarchofistanbul.github.io/bxstocker/
