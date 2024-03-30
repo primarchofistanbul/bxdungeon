@@ -1,8 +1,10 @@
-# Dungeon Trap Generator D&D 
-A simple trap generator for your dungeons. It rolls on four different valuables for each trap: mechanism (d8), trigger (d6), difficulty (d6), and clue (d6). It is based on a trap generating table I have created for my own use.
+# Dungeon Stocker for Basic D&D (Moldvay)
+A simple generator based on the rules provided on the Moldvay Basic D&D (1981) for stocking dungeons. It rolls the contents of each room for you, 
+and decides if the room has any monsters, traps, specials, or treasures in it. Some rooms are empty, as per the rules listed in the "Stocking the Dungeon" section of Moldvay basic.
 
 ## How to use
-1. Click on "Generate"
+1. Enter the number of rooms available in the dungeon.
+2. Click on "Generate"
 
 ## How to install
-Download the bxtrapper.html and run it on your favourite browser. Or, just try it on https://primarchofistanbul.github.io/bxtrapper/
+Download the bxdungeon.htm and run it on your favourite browser. Or, just try it on https://primarchofistanbul.github.io/bxstocker/
